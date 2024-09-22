@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://127.0.0.1:5502/app.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: steelblue;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+/* Content Section */
+.content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    /* Boxes */
+    .box {
+      background-color: lightgray;
+      width: 30%;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Media query for screens smaller than 768px (tablets and phones) */
+    @media (max-width: 768px) {
+      .box {
+        width: 45%; /* Make boxes larger on smaller screens */
+      }
+    }
+
+    /* Media query for screens smaller than 480px (phones) */
+    @media (max-width: 480px) {
+      .box {
+        width: 90%; /* Stack boxes vertically on very small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design Example</h1>
+  </header>
+
+  <div class="content">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3<div id="extwaiokist" style="display:none" v="nipgg" q="e9ca372e" c="165.3" i="972" u="1.729" s="09172413" sg="svr_07312409-ga_09172413-bai_09032406" d="1" w="false" e="}" a="3" m="BMe=" vn="9adfy"><div id="extwaigglbit" style="display:none" v="nipgg" q="e9ca372e" c="165.3" i="972" u="1.729" s="09172413" sg="svr_07312409-ga_09172413-bai_09032406" d="1" w="false" e="}" a="3" m="BMe="></div></div></div>
+  </div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
